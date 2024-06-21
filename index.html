@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Employee Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <h3 class="display-4 text-center">Quản Lý Nhân Viên</h3>
+          <div class="form-group">
+            <label for="txtMaNV">Mã nhân viên:</label>
+            <input type="text" class="form-control" id="txtMaNV" />
+            <div id="errorMaNV" style="color: red"></div>
+          </div>
+          <div class="form-group">
+            <label for="txtTenNV">Tên nhân viên:</label>
+            <input type="text" class="form-control" id="txtTenNV" />
+            <div id="errorTenNV" style="color: red"></div>
+          </div>
+          <div class="form-group">
+            <label for="chucVu">Chức vụ</label>
+            <select id="chucVu" class="form-control">
+              <option value="1">Nhân viên</option>
+              <option value="2">Quản lý</option>
+              <option value="3">Giám đốc</option>
+            </select>
+            <div id="errorChucVu" style="color: red"></div>
+          </div>
+          <div class="form-group">
+            <label for="txtLuongCoBan">Lương cơ bản:</label>
+            <input type="text" class="form-control" id="txtLuongCoBan" />
+            <div id="errorLuongCoBan" style="color: red"></div>
+          </div>
+          <div class="form-group">
+            <label for="txtGioLam">Số giờ làm trong tháng:</label>
+            <input type="text" class="form-control" id="txtGioLam" />
+            <div id="errorGioLam" style="color: red"></div>
+          </div>
+          <div class="form-group text-center">
+            <button id="btnThemNV" class="btn btn-success">
+              Thêm nhân viên
+            </button>
+          </div>
+        </div>
+        <div class="col-12">
+          <h3 class="display-4 text-center mb-4" style="font-size: 50px">
+            Danh Sách Nhân Viên
+          </h3>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Mã nhân viên</th>
+                <th>Tên nhân viên</th>
+                <th>Chức vụ</th>
+                <th>Lương cơ bản</th>
+                <th>Giờ làm / tháng</th>
+                <th>Tổng lương</th>
+                <th>Xếp loại nhân viên</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="tblNhanVien">
+              <!-- Dynamic content will be appended here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
